@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Data;
 use App\Host;
 use Illuminate\Http\Request;
 

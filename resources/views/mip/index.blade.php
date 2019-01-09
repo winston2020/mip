@@ -27,32 +27,28 @@
 
         <!--mainBox Star -->
         <div class="mainBox">
-
             <div id="sliderTxt" class="sliderTxt swipe">
                 <div class="swipeWrap">
                     <ul class="swiper-wrapper tabTxtSwipe clearfix">
                         <li class="swiper-slide current"><a href="{{url('')}}">首页</a></li>
-                        {loop type='typename' row=5}
-                        <li class="swiper-slide"><a href="{$vo.typeurl}">{$vo.typename}</a></li>
-                        {/loop}
+                        @foreach(\App\Data::NewPage(8) as $item)
+                        <li class="swiper-slide"><a href="{{$item->id}}">{{$item->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
-
-
             </div>
             <!--articleBar Star -->
             <ul class="articleBar">
-                {loop type='arclist' row=33}
+                @foreach(\App\Data::RandPageList(33) as $item)
                 <li class="imgBar">
-                    <a class="linkBar clearfix"  href="{$vo.url}">
+                    <a class="linkBar clearfix"  href="{{$item->id}}">
                         <div class="txtInfo">
-                            <h3>{$vo.title}</h3>
-                            <p><span class="time">{$vo.postdate}</span><span class="comment">浏览：{$vo.hits}</span></p>
+                            <h3>{{$item->title}}</h3>
+                            <p><span class="time">{{$item->title}}</span><span class="comment">浏览：{{rand(0,1000)}}</span></p>
                         </div>
-
                     </a>
                 </li>
-                {/loop}
+                @endforeach
             </ul>
             <!--articleBar End -->
 
