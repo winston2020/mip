@@ -54,7 +54,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="shortcut icon" href="https://www.mipcms.cn/favicon.ico" type="image/x-icon">
-    <title>{{$host->title}} - {{$host->webname}}</title>
+    <title>{{$host->webname}}</title>
     <meta name="keywords" content="{{$host->keyword}}">
     <meta name="description" content="{{$host->desc}}">
     <link rel="stylesheet" type="text/css" href="/{{$host->templet}}/style/css/mip.css">
