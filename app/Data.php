@@ -10,7 +10,8 @@ class Data extends Authenticatable
 {
     protected $table = 'data';
 
-    public static function NewPage($count)
+    public static function
+    NewPage($count)
     {
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
@@ -53,13 +54,13 @@ class Data extends Authenticatable
         return $data;
     }
 
-    public function 地名()
+    public static function 地名()
     {
         $data = file(public_path('city.txt'));
         return $data;
     }
 
-    public function 栏目()
+    public static function 栏目()
     {
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');

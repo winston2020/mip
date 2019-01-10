@@ -79,10 +79,10 @@
                     <li class="active">
                         <a href="{{url('')}}" data-type="mip" data-title="{{$host->webname}}" title="首页">首页</a>
                     </li>
-                   @foreach(\App\Data::)
+                   @foreach(\App\Data::栏目() as $item)
                     <li class="mipmb-dropdown-item ">
-                        <a href="{$vo.typeurl}" data-type="mip" data-title="{$vo.typename}"
-                           title="{$vo.typename}">{$vo.typename}</a>
+                        <a href="{{$item->en_name}}/" data-type="mip" data-title="{{$item->name}}"
+                           title="{{$item->name}}">{{$item->name}}</a>
                     </li>
                     @endforeach
                 </ul>
@@ -111,7 +111,7 @@
                                  alt="{$vo.title}"
                                  src="https://www.mipcms.cn//uploads/article/2017/07/29/597b72c666fcc.jpg">
                             <img class="mip-fill-content mip-replaced-content" alt="{$vo.title}"
-                                 src="/{{$host->templet}}/style/597b72c666fcc.jpg"></mip-img>
+                                 src="/{{$host->templet}}/style/images/597b72c666fcc.jpg"></mip-img>
                     </a>
                     <div class="caption w-100">
                         <time class="time" datetime="{$vo.postdate}">{$vo.postdate}</time>
@@ -129,7 +129,7 @@
                                  alt="{$vo.title}"
                                  src="https://www.mipcms.cn//uploads/article/2017/07/29/597b72c666fcc.jpg">
                             <img class="mip-fill-content mip-replaced-content" alt="{$vo.title}"
-                                 src="/{{$host->templet}}/style/597b72c666fcc.jpg"></mip-img>
+                                 src="/{{$host->templet}}/style/images/597b72c666fcc.jpg"></mip-img>
                     </a>
                     <div class="caption">
                         <a href="{$vo.url}" data-type="mip"
@@ -146,7 +146,7 @@
                                      alt="{$vo.title}"
                                      src="https://www.mipcms.cn//uploads/article/2017/07/29/597b72c666fcc.jpg">
                                 <img class="mip-fill-content mip-replaced-content" alt="{$vo.title}"
-                                     src="/{{$host->templet}}/style/597b72c666fcc.jpg"></mip-img>
+                                     src="/{{$host->templet}}/style/images/597b72c666fcc.jpg"></mip-img>
                         </a>
                         <div class="caption">
                             <a href="{$vo.url}" data-type="mip"
@@ -162,7 +162,7 @@
                                      alt="{$vo.title}"
                                      src="https://www.mipcms.cn//uploads/article/2017/07/29/597b72c666fcc.jpg">
                                 <img class="mip-fill-content mip-replaced-content" alt="{$vo.title}"
-                                     src="/{{$host->templet}}/style/597b72c666fcc.jpg"></mip-img>
+                                     src="/{{$host->templet}}/style/images/597b72c666fcc.jpg"></mip-img>
                         </a>
                         <div class="caption">
                             <a href="{$vo.url}" data-type="mip"
@@ -191,13 +191,13 @@
                             <section class="mip-box-body">
 
                                 <ul class="list-unstyled clearfix">
-                                    {loop type="arclist" row='5' }
+                                    @foreach(\App\Data::NewPage(5) as $item)
                                     <li class="list-time">
-                                        <a href="{$vo.url}"
-                                           data-type="mip" data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
-                                        <time class="pull-right">{$vo.postdate}</time>
+                                        <a href="{{$item->id}}"
+                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
+                                        <time class="pull-right">{{date('mm-dd')}}</time>
                                     </li>
-                                    {/loop}
+                                    @endforeach
                                 </ul>
 
                             </section>
@@ -218,13 +218,13 @@
                             <section class="mip-box-body">
 
                                 <ul class="list-unstyled clearfix">
-                                    {loop type="arclist" row='5' }
+                                    @foreach(\App\Data::NewPage(5) as $item)
                                     <li class="list-time">
-                                        <a href="{$vo.url}"
-                                           data-type="mip" data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
-                                        <time class="pull-right">{$vo.postdate}</time>
+                                        <a href="{{$item->id}}"
+                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
+                                        <time class="pull-right">{{date('mm-dd')}}</time>
                                     </li>
-                                    {/loop}
+                                    @endforeach
                                 </ul>
 
                             </section>
@@ -245,13 +245,13 @@
                             <section class="mip-box-body">
 
                                 <ul class="list-unstyled clearfix">
-                                    {loop type="arclist" row='5' }
+                                    @foreach(\App\Data::NewPage(5) as $item)
                                     <li class="list-time">
-                                        <a href="{$vo.url}"
-                                           data-type="mip" data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
-                                        <time class="pull-right">{$vo.postdate}</time>
+                                        <a href="{{$item->id}}"
+                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
+                                        <time class="pull-right">{{date('mm-dd')}}</time>
                                     </li>
-                                    {/loop}
+                                    @endforeach
                                 </ul>
 
                             </section>
@@ -272,13 +272,13 @@
                             <section class="mip-box-body">
 
                                 <ul class="list-unstyled clearfix">
-                                    {loop type="arclist" row='5' }
+                                    @foreach(\App\Data::NewPage(5) as $item)
                                     <li class="list-time">
-                                        <a href="{$vo.url}"
-                                           data-type="mip" data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
-                                        <time class="pull-right">{$vo.postdate}</time>
+                                        <a href="{{$item->id}}"
+                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
+                                        <time class="pull-right">{{date('mm-dd')}}</time>
                                     </li>
-                                    {/loop}
+                                    @endforeach
                                 </ul>
 
                             </section>
@@ -299,13 +299,13 @@
                             <section class="mip-box-body">
 
                                 <ul class="list-unstyled clearfix">
-                                    {loop type="arclist" row='5' }
+                                    @foreach(\App\Data::NewPage(5) as $item)
                                     <li class="list-time">
-                                        <a href="{$vo.url}"
-                                           data-type="mip" data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
-                                        <time class="pull-right">{$vo.postdate}</time>
+                                        <a href="{{$item->id}}"
+                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
+                                        <time class="pull-right">{{date('mm-dd')}}</time>
                                     </li>
-                                    {/loop}
+                                    @endforeach
                                 </ul>
 
                             </section>
@@ -326,13 +326,13 @@
                             <section class="mip-box-body">
 
                                 <ul class="list-unstyled clearfix">
-                                    {loop type="arclist" row='5' }
+                                    @foreach(\App\Data::NewPage(5) as $item)
                                     <li class="list-time">
-                                        <a href="{$vo.url}"
-                                           data-type="mip" data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
-                                        <time class="pull-right">{$vo.postdate}</time>
+                                        <a href="{{$item->id}}"
+                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
+                                        <time class="pull-right">{{date('mm-dd')}}</time>
                                     </li>
-                                    {/loop}
+                                    @endforeach
                                 </ul>
 
                             </section>

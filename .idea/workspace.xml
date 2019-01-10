@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5691015-8db9-4913-b07e-23730d3dafa1" name="Default" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Nav.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/data/author.txt" afterDir="false" />
@@ -74,6 +75,9 @@
       <change beforePath="$PROJECT_DIR$/resources/views/mip/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mip/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mip13/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mip13/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/Data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data.php" afterDir="false" />
+>>>>>>> 759a9e8907cce3f2f7851bbf7b020fb34a9e74f0
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -114,8 +118,13 @@
       <file leaf-file-name="Data.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Data.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="236">
               <caret line="54" selection-start-line="54" selection-end-line="54" />
+=======
+            <state relative-caret-position="619">
+              <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+>>>>>>> 759a9e8907cce3f2f7851bbf7b020fb34a9e74f0
               <folding>
                 <element signature="e#23#63#0#PHP" expanded="true" />
               </folding>
@@ -420,13 +429,21 @@
       <updated>1547003041275</updated>
       <workItem from="1547003043009" duration="11636000" />
       <workItem from="1547086959106" duration="8229000" />
+<<<<<<< HEAD
       <workItem from="1547108108400" duration="3490000" />
       <workItem from="1547112362953" duration="98000" />
+=======
+      <workItem from="1547108108400" duration="4267000" />
+>>>>>>> 759a9e8907cce3f2f7851bbf7b020fb34a9e74f0
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="23453000" />
+=======
+    <option name="totallyTimeSpent" value="24132000" />
+>>>>>>> 759a9e8907cce3f2f7851bbf7b020fb34a9e74f0
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -751,8 +768,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Data.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="236">
           <caret line="54" selection-start-line="54" selection-end-line="54" />
+=======
+        <state relative-caret-position="619">
+          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+>>>>>>> 759a9e8907cce3f2f7851bbf7b020fb34a9e74f0
           <folding>
             <element signature="e#23#63#0#PHP" expanded="true" />
           </folding>
