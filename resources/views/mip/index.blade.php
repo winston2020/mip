@@ -64,7 +64,7 @@
 
     <!--footer Star -->
     <footer>
-        <p>CopyRight 20012-2019 {{$host->title}}
+        <p>CopyRight 2012-2019 {{$host->title}}
         </p>
 
     </footer>
