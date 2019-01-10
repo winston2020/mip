@@ -18,7 +18,7 @@ class NiceWork extends Command
     protected $signature = 'data:start';
     private $totalPageCount;
     private $counter        = 1;
-    private $concurrency    = 10;  // 同时并发抓取
+    private $concurrency    = 5;  // 同时并发抓取
     /**
      * The console command description.
      *
@@ -45,16 +45,15 @@ class NiceWork extends Command
     {
         set_time_limit(0);
         ini_set('memory_limit', '128M');
-        for ($i=0;$i<10;$i++){
+        for ($i=0;$i<20030;$i++){
             $this->url[] = 'https://so.gushiwen.org/guwen/bookv_'.$i.'.aspx';
         }
-        $this->totalPageCount = 2;
+        $this->totalPageCount = 20030;
         $client = new Client();
         $requests = function ($total) use ($client) {
                 foreach ($this->url as $this->key1=>$uri){
                     yield function() use ($client, $uri) {
                         $this->uri =  $uri ;
-                        sleep(1);
                         return $client->getAsync($uri);
                     };
                 }
@@ -69,31 +68,28 @@ class NiceWork extends Command
                 if ($bool===true){
                   echo '当前文章没有'.PHP_EOL;
                 }else{
-                $crawler = new Crawler();
-                $crawler->addHtmlContent($http);
-                if ($response->getStatusCode() ==200){
+                    $crawler = new Crawler();
+                    $crawler->addHtmlContent($http);
                     try
                     {
                         $data['title'] = $crawler->filter('head > title')->text();
-                        $content = $crawler->filter('#left1 > div > div.cont > div')->text();
-                        dd($content);
+                        $content = $crawler->filter('body > div.main3 > div.left > div > div.cont > div')->html();
+                        $data['created_at'] = date('Y-m-d H:i:s');
+                        $data['updated_at'] = date('Y-m-d H:i:s');
+                        $data['type_id'] = 1;
                         $data['content'] = mb_convert_encoding ($content, 'UTF-8');
                     }
                     catch(\Exception $e)
                     {
                         echo 'html解析出错'.PHP_EOL;
                     }
-                    $data['created_at'] = date('Y-m-d H:i:s');
-                    $data['updated_at'] = date('Y-m-d H:i:s');
                     $bool = DB::table('data')->insert($data);
-
                     if ($bool){
                         echo 'success'.PHP_EOL;
                     }else{
                         echo 'fail'.PHP_EOL;
                     }
-                }
-                echo $response->getStatusCode().PHP_EOL;
+                    echo $response->getStatusCode().PHP_EOL;
                 $this->countedAndCheckEnded();
                 }
             },
@@ -107,10 +103,6 @@ class NiceWork extends Command
         $promise = $pool->promise();
         $promise->wait();
     }
-
-
-
-
 
     public function countedAndCheckEnded()
     {

@@ -54,7 +54,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="shortcut icon" href="https://www.mipcms.cn/favicon.ico" type="image/x-icon">
-    <title>{{$host->webname}}</title>
+    <title>{{$host->title}}</title>
     <meta name="keywords" content="{{$host->keyword}}">
     <meta name="description" content="{{$host->desc}}">
     <link rel="stylesheet" type="text/css" href="/{{$host->templet}}/style/css/mip.css">
@@ -73,18 +73,18 @@
         <div class="container d-lg-flex justify-content-between">
             <div class="d-lg-flex justify-content-start">
                 <div class="logo-text">
-                    <a data-type="mip" href="{{url('')}}" data-title="{{$host->webname}}">{{$host->webname}}</a>
+                    <a data-type="mip" href="{{url('')}}" data-title="{{$host->webname}}">{{$host->title}}</a>
                 </div>
                 <ul class="mipmb-menu list-unstyled d-lg-flex">
                     <li class="active">
                         <a href="{{url('')}}" data-type="mip" data-title="{{$host->webname}}" title="首页">首页</a>
                     </li>
-                    {loop type='typename' row=6}
+                   @foreach(\App\Data::)
                     <li class="mipmb-dropdown-item ">
                         <a href="{$vo.typeurl}" data-type="mip" data-title="{$vo.typename}"
                            title="{$vo.typename}">{$vo.typename}</a>
                     </li>
-                    {/loop}
+                    @endforeach
                 </ul>
             </div>
             <div class="d-lg-flex d-none">
