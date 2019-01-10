@@ -12,4 +12,5 @@
 */
 
 Route::get('/','HomeController@index');
-Route::get('{id}.html','HomeController@show');
+Route::get('{nav}/','HomeController@list');
+Route::get('{nav}/{id}.html','HomeController@show');
