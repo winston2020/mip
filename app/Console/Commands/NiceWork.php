@@ -64,6 +64,7 @@ class NiceWork extends Command
             'fulfilled'   => function ($response, $index){
                 echo '爬取'.$this->url[$index].PHP_EOL;
                 $http = $response->getBody()->getContents();
+                dd($http);
                 $bool = strpos($http,'该文章不存在或已被删除');
                 if ($bool===true){
                   echo '当前文章没有'.PHP_EOL;
@@ -78,6 +79,7 @@ class NiceWork extends Command
                         $data['updated_at'] = date('Y-m-d H:i:s');
                         $data['type_id'] = 1;
                         $data['content'] = mb_convert_encoding ($content, 'UTF-8');
+                        dd($data);
                     }
                     catch(\Exception $e)
                     {

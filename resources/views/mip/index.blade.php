@@ -171,6 +171,7 @@
         <!-- <div class="load-more">
                 <p>查看更多<i></i></p>
             </div> -->
+        {{随机}}
 
         <ul class="caipu_lists">
             @foreach(\App\Data::RandPageList(6) as $item)

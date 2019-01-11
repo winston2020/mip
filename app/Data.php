@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Http\Request;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -83,5 +84,12 @@ class Data extends Authenticatable
             ->get();
         return $data;
     }
+
+    public static function 文章内容(Request $request){
+        $id = $request->route( 'id' );
+        $data =  Data::find($id);
+        return $data;
+    }
+
 
 }
