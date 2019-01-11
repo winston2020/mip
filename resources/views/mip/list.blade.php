@@ -172,17 +172,6 @@
                 <p>查看更多<i></i></p>
             </div> -->
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <!--footer Star -->
-    <footer>
-        <p>CopyRight 2012-2019 {{$host->title}}
-        </p>
-=======
->>>>>>> c80707f73ba306fabf63929becbd42c01d837cd3
-
-=======
->>>>>>> 23be6aca3b7123baec4685ee0157e84a713db5d4
         <ul class="caipu_lists">
             @foreach(\App\Data::RandPageList(6) as $item)
             <li>
@@ -196,9 +185,9 @@
         </ul>
         <div class="block10"></div>
         <ul class="catepic_left" id="ajax-list">
-            @foreach(\App\Data::NewPage(18) as $item)
+            @foreach(\App\Data::栏目文章(18) as $item)
             <li>
-                <a href="{{url('')}}/{{$item->id}}.html" class="content">
+                <a href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html" class="content">
                     <i><mip-img class="lazyload mip-element mip-layout-container mip-img-loaded" data-original="" src="http://img.piaoliang.com/uploads/allimg/170220/1k4415106-0-lp.jpg" alt="{{$item->title}}"><img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/1k4415106-0-lp.jpg" alt="{{$item->title}}"></mip-img></i>
                     <h5>{{$item->title}}</h5>
                 </a>
@@ -211,8 +200,9 @@
             <div class="inner clr">
                 <span><a target="_blank" href="{{url('')}}"><i class="on">首页</i></a></span>
                 @foreach(\App\Data::栏目() as $item)
-                <span><a target="_blank" href="{{url('')}}/{{$item->en_name}}/"><i>{{$item->name}}</i></a></span>
+                <span><a target="_blank" href="{{url('')}}/{{$item->en_name}}"><i>{{$item->name}}</i></a></span>
                 @endforeach
+
             </div>
         </div>
         <div class="block10"></div>

@@ -54,7 +54,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="shortcut icon" href="https://www.mipcms.cn/favicon.ico" type="image/x-icon">
-    <title>{{$host->title}}_{{$host->webname}}</title>
+    <title>文章标题_{{$host->title}}</title>
     <meta name="keywords" content="{{$host->keyword}}">
     <meta name="description" content="{{$host->desc}}">
     <meta property="og:type" content="article">
@@ -62,7 +62,7 @@
     <meta property="og:description"
           content="{{$host->desc}}">
     <meta property="og:image" content="">
-    <meta property="og:release_date" content="2017-09-07">
+    <meta property="og:release_date" content="{{\App\Data::随机日期()}}">
 
     <link rel="stylesheet" type="text/css" href="/{{$host->templet}}/style/css/mip.css">
     <link rel="stylesheet" href="/{{$host->templet}}/style/css/bootstrap.min.css">

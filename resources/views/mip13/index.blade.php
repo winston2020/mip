@@ -73,11 +73,11 @@
         <div class="container d-lg-flex justify-content-between">
             <div class="d-lg-flex justify-content-start">
                 <div class="logo-text">
-                    <a data-type="mip" href="{{url('')}}" data-title="{{$host->webname}}">{{$host->title}}</a>
+                    <a data-type="mip" href="{{url('')}}" data-title="{{$host->title}}">{{$host->title}}</a>
                 </div>
                 <ul class="mipmb-menu list-unstyled d-lg-flex">
                     <li class="active">
-                        <a href="{{url('')}}" data-type="mip" data-title="{{$host->webname}}" title="首页">首页</a>
+                        <a href="{{url('')}}" data-type="mip" data-title="{{$host->title}}" title="首页">首页</a>
                     </li>
                    @foreach(\App\Data::栏目() as $item)
                     <li class="mipmb-dropdown-item ">
@@ -103,72 +103,80 @@
     <div class="container mb-3 d-none d-sm-block">
         <div class="row">
             <div class="col-lg-8">
+                @foreach(\App\Data::RandPageList(1) as $item)
                 <div class="position-relative">
-                    <a href="{$vo.url}" data-type="mip"
-                       data-title="{$vo.title}" title="{$vo.title}"
+                    <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                       data-title="{{$item->title}}" title="{{$item->title}}"
                        class="mip-top-img image-link-left">
                         <mip-img layout="full" class="img left-img mip-element mip-layout-container mip-img-loaded"
-                                 alt="{$vo.title}"
+                                 alt="{{$item->title}}"
                                  src="https://www.mipcms.cn//uploads/article/2017/07/29/597b72c666fcc.jpg">
-                            <img class="mip-fill-content mip-replaced-content" alt="{$vo.title}"
+                            <img class="mip-fill-content mip-replaced-content" alt="{{$item->title}}"
                                  src="/{{$host->templet}}/style/images/597b72c666fcc.jpg"></mip-img>
                     </a>
                     <div class="caption w-100">
-                        <time class="time" datetime="{$vo.postdate}">{$vo.postdate}</time>
-                        <h3><a href="{$vo.url}" data-type="mip"
-                               data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a></h3>
+                        <time class="time" datetime="{$vo.postdate}">{{  date('Y-m-d',strtotime($item->created_at)) }}</time>
+                        <h3><a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                               data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a></h3>
                     </div>
                 </div>
+                @endforeach
             </div>
             <div class="col-lg-4">
+                @foreach(\App\Data::RandPageList(1) as $item)
                 <div class="mip-top-block mip-top-right mb-3">
-                    <a href="{$vo.url}" data-type="mip"
-                       data-title="{$vo.title}" title="{$vo.title}"
+                    <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                       data-title="{{$item->title}}" title="{{$item->title}}"
                        class="mip-top-img image-link-right-top">
                         <mip-img layout="full" class="img right-img-top mip-element mip-layout-container mip-img-loaded"
-                                 alt="{$vo.title}"
+                                 alt="{{$item->title}}"
                                  src="https://www.mipcms.cn//uploads/article/2017/07/29/597b72c666fcc.jpg">
-                            <img class="mip-fill-content mip-replaced-content" alt="{$vo.title}"
+                            <img class="mip-fill-content mip-replaced-content" alt="{{$item->title}}"
                                  src="/{{$host->templet}}/style/images/597b72c666fcc.jpg"></mip-img>
                     </a>
                     <div class="caption">
-                        <a href="{$vo.url}" data-type="mip"
-                           data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
+                        <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                           data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
                     </div>
                 </div>
+                @endforeach
+                @foreach(\App\Data::RandPageList(1) as $item)
                 <div class="d-flex justify-content-between">
                     <div class="mip-top-block mip-top-right">
-                        <a href="{$vo.url}" data-type="mip"
-                           data-title="{$vo.title}" title="{$vo.title}"
+                        <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                           data-title="{{$item->title}}" title="{{$item->title}}"
                            class="mip-top-img image-link-right-bottom">
                             <mip-img layout="full"
                                      class="img right-img-bottom mip-element mip-layout-container mip-img-loaded"
-                                     alt="{$vo.title}"
+                                     alt="{{$item->title}}"
                                      src="https://www.mipcms.cn//uploads/article/2017/07/29/597b72c666fcc.jpg">
-                                <img class="mip-fill-content mip-replaced-content" alt="{$vo.title}"
+                                <img class="mip-fill-content mip-replaced-content" alt="{{$item->title}}"
                                      src="/{{$host->templet}}/style/images/597b72c666fcc.jpg"></mip-img>
                         </a>
                         <div class="caption">
-                            <a href="{$vo.url}" data-type="mip"
-                               data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
+                            <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                               data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
                         </div>
                     </div>
+                    @endforeach
+                    @foreach(\App\Data::RandPageList(1) as $item)
                     <div class="mip-top-block mip-top-right">
-                        <a href="{$vo.url}" data-type="mip"
-                           data-title="{$vo.title}" title="{$vo.title}"
+                        <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                           data-title="{{$item->title}}" title="{{$item->title}}"
                            class="mip-top-img image-link-right-bottom">
                             <mip-img layout="full"
                                      class="img right-img-bottom mip-element mip-layout-container mip-img-loaded"
-                                     alt="{$vo.title}"
+                                     alt="{{$item->title}}"
                                      src="https://www.mipcms.cn//uploads/article/2017/07/29/597b72c666fcc.jpg">
-                                <img class="mip-fill-content mip-replaced-content" alt="{$vo.title}"
+                                <img class="mip-fill-content mip-replaced-content" alt="{{$item->title}}"
                                      src="/{{$host->templet}}/style/images/597b72c666fcc.jpg"></mip-img>
                         </a>
                         <div class="caption">
-                            <a href="{$vo.url}" data-type="mip"
-                               data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
+                            <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                               data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -178,24 +186,23 @@
         <div class="row">
             <main class="col-lg-8">
                 <div class="row">
+                    @foreach(\App\Data::栏目() as $item)
                     <section class="col-lg-6">
-
                         <section class="mip-box">
 
                             <section class="mip-box-heading">
 
-                                <h3>{$typename}</h3>
+                                <h3>{{$item->name}}</h3>
 
                             </section>
 
                             <section class="mip-box-body">
-
                                 <ul class="list-unstyled clearfix">
                                     @foreach(\App\Data::NewPage(5) as $item)
                                     <li class="list-time">
                                         <a href="{{$item->id}}"
-                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
-                                        <time class="pull-right">{{date('mm-dd')}}</time>
+                                           data-type="mip" data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
+                                        <time class="pull-right">{{  date('Y-m-d',strtotime($item->created_at)) }}</time>
                                     </li>
                                     @endforeach
                                 </ul>
@@ -205,188 +212,37 @@
                         </section>
 
                     </section>
-                    <section class="col-lg-6">
-
-                        <section class="mip-box">
-
-                            <section class="mip-box-heading">
-
-                                <h3>{$typename}</h3>
-
-                            </section>
-
-                            <section class="mip-box-body">
-
-                                <ul class="list-unstyled clearfix">
-                                    @foreach(\App\Data::NewPage(5) as $item)
-                                    <li class="list-time">
-                                        <a href="{{$item->id}}"
-                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
-                                        <time class="pull-right">{{date('mm-dd')}}</time>
-                                    </li>
-                                    @endforeach
-                                </ul>
-
-                            </section>
-
-                        </section>
-
-                    </section>
-                    <section class="col-lg-6">
-
-                        <section class="mip-box">
-
-                            <section class="mip-box-heading">
-
-                                <h3>{$typename}</h3>
-
-                            </section>
-
-                            <section class="mip-box-body">
-
-                                <ul class="list-unstyled clearfix">
-                                    @foreach(\App\Data::NewPage(5) as $item)
-                                    <li class="list-time">
-                                        <a href="{{$item->id}}"
-                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
-                                        <time class="pull-right">{{date('mm-dd')}}</time>
-                                    </li>
-                                    @endforeach
-                                </ul>
-
-                            </section>
-
-                        </section>
-
-                    </section>
-                    <section class="col-lg-6">
-
-                        <section class="mip-box">
-
-                            <section class="mip-box-heading">
-
-                                <h3>{$typename}</h3>
-
-                            </section>
-
-                            <section class="mip-box-body">
-
-                                <ul class="list-unstyled clearfix">
-                                    @foreach(\App\Data::NewPage(5) as $item)
-                                    <li class="list-time">
-                                        <a href="{{$item->id}}"
-                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
-                                        <time class="pull-right">{{date('mm-dd')}}</time>
-                                    </li>
-                                    @endforeach
-                                </ul>
-
-                            </section>
-
-                        </section>
-
-                    </section>
-                    <section class="col-lg-6">
-
-                        <section class="mip-box">
-
-                            <section class="mip-box-heading">
-
-                                <h3>{$typename}</h3>
-
-                            </section>
-
-                            <section class="mip-box-body">
-
-                                <ul class="list-unstyled clearfix">
-                                    @foreach(\App\Data::NewPage(5) as $item)
-                                    <li class="list-time">
-                                        <a href="{{$item->id}}"
-                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
-                                        <time class="pull-right">{{date('mm-dd')}}</time>
-                                    </li>
-                                    @endforeach
-                                </ul>
-
-                            </section>
-
-                        </section>
-
-                    </section>
-                    <section class="col-lg-6">
-
-                        <section class="mip-box">
-
-                            <section class="mip-box-heading">
-
-                                <h3>{$typename}</h3>
-
-                            </section>
-
-                            <section class="mip-box-body">
-
-                                <ul class="list-unstyled clearfix">
-                                    @foreach(\App\Data::NewPage(5) as $item)
-                                    <li class="list-time">
-                                        <a href="{{$item->id}}"
-                                           data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
-                                        <time class="pull-right">{{date('mm-dd')}}</time>
-                                    </li>
-                                    @endforeach
-                                </ul>
-
-                            </section>
-
-                        </section>
-
-                    </section>
+                    @endforeach
                 </div>
             </main>
             <aside class="col-lg-4 hidden-xs">
-
-
-                <div class="mip-box">
-
-                    <div class="mip-box-heading">
-
-                        <h3 class="title">{$typename}</h3>
-
-                    </div>
-
-                    <div class="mip-box-body">
-
-                        <a href="{$vo.url}">{$vo.title}</a>
-
-                    </div>
-
-                </div>
                 <section class="mip-box mip-box-default">
                     <section class="mip-box-heading">
-                        <h3>{$typename}</h3>
+                        <h3>热门文章</h3>
                     </section>
                     <section class="mip-box-body">
                         <ul class="list-unstyled">
-                            {loop type="arclist" row='6' }
+                            @foreach(\App\Data::NewPage(6) as $item)
                             <li class="li-box-list">
-                                <a href="{$vo.url}" data-type="mip"
-                                   data-title="{$vo.title}" title="{$vo.title}">{$vo.title}</a>
-                                <p>{$vo.postdate}</p>
+                                <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                                   data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
+                                <p>{{  date('Y-m-d',strtotime($item->created_at)) }}</p>
                             </li>
-                            {/loop}
+                            @endforeach
                         </ul>
                     </section>
                 </section>
                 <div class="mip-box">
                     <div class="mip-box-heading">
-                        <h3 class="title">{$typename}</h3>
+                        <h3 class="title">热门标签</h3>
                     </div>
                     <div class="mip-box-body">
                         <ul class="list-unstyled tags">
-                            {loop type="typename" row='15' }
+                            @foreach(\App\Data::栏目() as $item)
                             <li class="m-b-sm">
-                                <a href="{$vo.typeurl}" data-type="mip" data-title="{$vo.typename}" title="{$vo.typename}">{$vo.typename}</a>
+                                <a href="{{url('')}}/{{$item->en_name}}/" data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
                             </li>
-                            {/loop}
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -399,18 +255,8 @@
 </main>
 <footer class="mipui-footer">
     <div class="container">
-        <div class="friend-link hidden-xs">
-            <ul>
-                <li> 友情链接：</li>
-                {loop type="typename" row='3' }
-                <li>
-                    <a href="{$vo.typeurl}" data-type="mip" data-title="{$vo.typename}" title="{$vo.typename}" target="_blank">{$vo.typename}</a>
-                </li>
-                {/loop}
-            </ul>
-        </div>
-        <p class="text-center mip-footer">©2019 <a data-type="mip" href="{{url('')}}" data-title="{{$host->webname}}">{{$host->webname}}</a>
-            <a href="{{url('')}}"> 苏ICP备16039536号-2</a> Powered By {{$host->webname}}
+        <p class="text-center mip-footer">©2019 <a data-type="mip" href="{{url('')}}" data-title="{{$host->title}}">{{$host->title}}</a>
+            <a href="{{url('')}}"> 苏ICP备16039536号-2</a> Powered By {{$host->title}}
             <mip-stats-baidu token="aa0ba8827eb0b92deb3dc9369698d6d3" class="mip-element mip-layout-container">
                 <script src="/{{$host->templet}}/style/js/hm.js"></script>
             </mip-stats-baidu>
