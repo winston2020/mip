@@ -54,14 +54,14 @@ class Data extends Authenticatable
 
     public static function 人名()
     {
-        $data = file(public_path('author.txt'));
-        return $data;
+        $data = file(public_path('data/author.txt'));
+        return  array_random($data);
     }
 
     public static function 地名()
     {
-        $data = file(public_path('city.txt'));
-        return $data;
+        $data = file(public_path('data/city.txt'));
+        return array_random($data);
     }
 
     public static function 栏目()
@@ -94,6 +94,19 @@ class Data extends Authenticatable
         $data =  Data::find($id);
         return $data;
     }
+
+    public static function CurrentNav()
+    {
+        $nav = request()->route('nav');
+        $host = $_SERVER['HTTP_HOST'];
+        $domain =  str_after($host,'.');
+        $host =  Host::where(['name'=>$domain])->first();
+        $data = \App\Nav::where(['host_id'=>$host->id,'en_name'=>$nav])->first();
+        return  $data;
+    }
+    
+    
+
 
 
 

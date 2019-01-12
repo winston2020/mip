@@ -43,6 +43,27 @@ function 随机图片(){
     return '/'.array_random($files);
 }
 
+function 当前栏目(){
+    return \App\Data::CurrentNav();
+}
+
+function 当前URL(){
+   return \Illuminate\Support\Facades\URL::current();
+}
+
+function 关键词($string, $len=1){
+    $string = str_replace(array("\r\n", "\r", "\n"), "", $string);
+    preg_match_all('/./u', $string, $matches);
+    $data = array_chunk($matches[0],$len);
+    foreach ($data as $key=>$item){
+        $new[$key] = implode($item);
+    }
+    $keyword = implode($new,',');
+    return $keyword;
+
+
+}
+
 
 
 
