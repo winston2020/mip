@@ -226,7 +226,7 @@
                             <li class="li-box-list">
                                 <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
                                    data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
-                                <p>{{  date('Y-m-d',strtotime($item->created_at)) }}</p>
+                                <p>{{\App\Data::随机日期()}}</p>
                             </li>
                             @endforeach
                         </ul>

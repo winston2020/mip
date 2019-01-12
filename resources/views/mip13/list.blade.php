@@ -136,7 +136,7 @@
                                     <p class="description">
                                         有很多小伙伴们不知道如何在MIPCMS里面插入外站视频，那么今天就教大家几招，来解决外部视频插入的烦恼。新建自定义字段自定义字段是跟着文章，不是全局的，如果新建全局字段，可以用</p>
                                     <p>
-                                        <span>{{  date('Y-m-d',strtotime($item->created_at)) }}</span>
+                                        <span>{{\App\Data::随机日期()}}</span>
                                     </p>
                                 </div>
                             </div>
@@ -164,37 +164,13 @@
                     </section>
                     <section class="mip-box-body">
                         <ul class="list-unstyled">
+                            @foreach(\App\Data::NewPage(6) as $item)
                             <li class="li-box-list">
-                                <a href="https://www.mipcms.cn/article/20ab67fe95c01e380d185239.html" data-type="mip"
-                                   data-title="如何正确的使用MIPCMS" title="如何正确的使用MIPCMS">如何正确的使用MIPCMS</a>
-                                <p>2017-07-30</p>
+                                <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                                   data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}S</a>
+                                <p>{{\App\Data::随机日期()}}</p>
                             </li>
-                            <li class="li-box-list">
-                                <a href="https://www.mipcms.cn/article/cb3014e87c2d90fc194a4afa.html" data-type="mip"
-                                   data-title="MIPCMS图文安装教程" title="MIPCMS图文安装教程">MIPCMS图文安装教程</a>
-                                <p>2017-05-03</p>
-                            </li>
-                            <li class="li-box-list">
-                                <a href="https://www.mipcms.cn/article/4472fd522aa77d689386bc8d.html" data-type="mip"
-                                   data-title="MIPCMS内容管理系统MIP模板标签说明文档（更新中）" title="MIPCMS内容管理系统MIP模板标签说明文档（更新中）">MIPCMS内容管理系统MIP模板标签说明文档（更新中）</a>
-                                <p>2017-06-11</p>
-                            </li>
-                            <li class="li-box-list">
-                                <a href="https://www.mipcms.cn/article/7ed35d6adcf8e4e8d875bb4a.html" data-type="mip"
-                                   data-title="MIPCMS集成百度站内搜索详细步骤流程"
-                                   title="MIPCMS集成百度站内搜索详细步骤流程">MIPCMS集成百度站内搜索详细步骤流程</a>
-                                <p>2017-07-21</p>
-                            </li>
-                            <li class="li-box-list">
-                                <a href="https://www.mipcms.cn/article/fd13bdb1c237da84980e1c2a.html" data-type="mip"
-                                   data-title="百度官方号如何提交内容？" title="百度官方号如何提交内容？">百度官方号如何提交内容？</a>
-                                <p>2017-08-17</p>
-                            </li>
-                            <li class="li-box-list">
-                                <a href="https://www.mipcms.cn/article/687a024249e17b80ef82c3b5.html" data-type="mip"
-                                   data-title="百度MIP批量提交功能开通，MIPCMS值得拥有" title="百度MIP批量提交功能开通，MIPCMS值得拥有">百度MIP批量提交功能开通，MIPCMS值得拥有</a>
-                                <p>2017-06-10</p>
-                            </li>
+                            @endforeach
                         </ul>
                     </section>
                 </section>
@@ -205,36 +181,11 @@
                     </div>
                     <div class="mip-box-body">
                         <ul class="list-unstyled tags">
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/1/" data-type="mip" data-title="mip"
-                                                  title="mip">mip</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/2/" data-type="mip"
-                                                  data-title="mipcms" title="mipcms">mipcms</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/5/" data-type="mip" data-title="案例"
-                                                  title="案例">案例</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/8/" data-type="mip" data-title="百度"
-                                                  title="百度">百度</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/3/" data-type="mip" data-title="seo"
-                                                  title="seo">seo</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/6a03f5805e794d637c121a63/"
-                                                  data-type="mip" data-title="官方号" title="官方号">官方号</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/6/" data-type="mip" data-title="网站"
-                                                  title="网站">网站</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/148862027553019d1f3ed93d/"
-                                                  data-type="mip" data-title="MIP站群" title="MIP站群">MIP站群</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/703d93683808333173403806/"
-                                                  data-type="mip" data-title="升级" title="升级">升级</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/fc402737a0e3a30a26dbec62/"
-                                                  data-type="mip" data-title="编辑器" title="编辑器">编辑器</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/4/" data-type="mip" data-title="教程"
-                                                  title="教程">教程</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/7/" data-type="mip" data-title="关键词"
-                                                  title="关键词">关键词</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/9/" data-type="mip" data-title="内容"
-                                                  title="内容">内容</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/10/" data-type="mip" data-title="蜘蛛"
-                                                  title="蜘蛛">蜘蛛</a></li>
-                            <li class="m-b-sm"><a href="https://www.mipcms.cn/tag/11/" data-type="mip" data-title="统计"
-                                                  title="统计">统计</a></li>
+                            @foreach(\App\Data::栏目() as $item)
+                                <li class="m-b-sm">
+                                    <a href="{{url('')}}/{{$item->en_name}}/" data-type="mip" data-title="{{$item->name}}" title="{{$item->name}}">{{$item->name}}</a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -247,29 +198,10 @@
 </main>
 <footer class="mipui-footer">
     <div class="container">
-        <div class="friend-link hidden-xs">
-            <ul>
-                <li> 友情链接：</li>
-                <li>
-                    <a href="http://www.dysfz.com/" data-type="mip" data-title="电影首发站" title="电影首发站" target="_blank">电影首发站</a>
-                </li>
-                <li>
-                    <a href="http://www.mipcms.com/" data-type="mip" data-title="mip" title="mip"
-                       target="_blank">mip</a>
-                </li>
-                <li>
-                    <a href="http://www.mipzhanqun.cn/" data-type="mip" data-title="MIP站群" title="MIP站群"
-                       target="_blank">MIP站群</a>
-                </li>
-                <li>
-                    <a href="http://www.gwxwl.com/" data-type="mip" data-title="网站编程网" title="网站编程网" target="_blank">网站编程网</a>
-                </li>
-            </ul>
-        </div>
-        <p class="text-center mip-footer">©2019 <a data-type="mip" href="https://www.mipcms.cn/" data-title="MIPCMS演示站">MIPCMS演示站</a>
-            <a href="http://www.miibeian.gov.cn/"> 苏ICP备16039536号-2</a> Powered By 苏州三三云网络科技有限公司
+        <p class="text-center mip-footer">©2019 <a data-type="mip" href="{{url('')}}" data-title="{{$host->title}}">{{$host->title}}</a>
+            <a href="{{url('')}}"> 苏ICP备16039536号-2</a> Powered By {{$host->title}}
             <mip-stats-baidu token="aa0ba8827eb0b92deb3dc9369698d6d3" class="mip-element mip-layout-container">
-                <script src="./功能介绍_MIPCMS演示站_files/hm.js"></script>
+                <script src="/{{$host->templet}}/style/js/hm.js"></script>
             </mip-stats-baidu>
         </p>
     </div>
@@ -279,12 +211,12 @@
     <mip-gototop class="mip-element mip-layout-container"></mip-gototop>
 </mip-fixed>
 
-<script src="./功能介绍_MIPCMS演示站_files/mip.js"></script>
-<script src="./功能介绍_MIPCMS演示站_files/mip-stats-baidu.js"></script>
-<script src="./功能介绍_MIPCMS演示站_files/mip-gototop.js" type="text/javascript" charset="utf-8"></script>
-<script src="./功能介绍_MIPCMS演示站_files/mip-history.js" type="text/javascript" charset="utf-8"></script>
-<script src="./功能介绍_MIPCMS演示站_files/mip-fixed.js" type="text/javascript" charset="utf-8"></script>
-<script src="./功能介绍_MIPCMS演示站_files/mip-cambrian.js"></script>
+<script src="/{{$host->templet}}/style/js/mip.js"></script>
+<script src="/{{$host->templet}}/style/js/mip-stats-baidu.js"></script>
+<script src="/{{$host->templet}}/style/js/mip-gototop.js" type="text/javascript" charset="utf-8"></script>
+<script src="/{{$host->templet}}/style/js/mip-history.js" type="text/javascript" charset="utf-8"></script>
+<script src="/{{$host->templet}}/style/js/mip-fixed.js" type="text/javascript" charset="utf-8"></script>
+<script src="/{{$host->templet}}/style/js/mip-cambrian.js"></script>
 
 
 </body>

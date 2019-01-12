@@ -26,6 +26,7 @@ class HomeController extends Controller
 
     public function show()
     {
+        $
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $yuming =  Host::where(['name'=>$domain])->first();
