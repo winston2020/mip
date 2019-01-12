@@ -10,8 +10,8 @@ function 随机日期(){
     return \App\Data::随机日期();
 }
 
-function 最新文章($count){
-    return \App\Data::NewPage($count);
+function 最新文章列表($count){
+    return \App\Data::NewPageList($count);
 }
 
 function 随机文章列表($count){
@@ -37,6 +37,13 @@ function 栏目文章列表($count){
 function 文章内容(){
     return \App\Data::文章内容();
 }
+
+function 随机图片(){
+    $files = \Illuminate\Support\Facades\Storage::allFiles('img');
+    return '/'.array_random($files);
+}
+
+
 
 
 

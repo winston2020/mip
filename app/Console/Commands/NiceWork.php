@@ -18,7 +18,7 @@ class NiceWork extends Command
     protected $signature = 'data:start';
     private $totalPageCount;
     private $counter        = 1;
-    private $concurrency    = 5;  // 同时并发抓取
+    private $concurrency    = 3;  // 同时并发抓取
     /**
      * The console command description.
      *
@@ -45,7 +45,8 @@ class NiceWork extends Command
     {
         set_time_limit(0);
         ini_set('memory_limit', '128M');
-        for ($i=0;$i<20030;$i++){
+
+        for ($i=14324;$i<20030;$i++){
             $this->url[] = 'https://so.gushiwen.org/guwen/bookv_'.$i.'.aspx';
         }
         $this->totalPageCount = 20030;
@@ -64,7 +65,6 @@ class NiceWork extends Command
             'fulfilled'   => function ($response, $index){
                 echo '爬取'.$this->url[$index].PHP_EOL;
                 $http = $response->getBody()->getContents();
-                dd($http);
                 $bool = strpos($http,'该文章不存在或已被删除');
                 if ($bool===true){
                   echo '当前文章没有'.PHP_EOL;
@@ -77,9 +77,9 @@ class NiceWork extends Command
                         $content = $crawler->filter('body > div.main3 > div.left > div > div.cont > div')->html();
                         $data['created_at'] = date('Y-m-d H:i:s');
                         $data['updated_at'] = date('Y-m-d H:i:s');
-                        $data['type_id'] = 1;
+                        $data['host_id'] = 1;
+                        $data['nav_id'] = rand(1,5);
                         $data['content'] = mb_convert_encoding ($content, 'UTF-8');
-                        dd($data);
                     }
                     catch(\Exception $e)
                     {

@@ -11,12 +11,20 @@ class Data extends Authenticatable
 {
     protected $table = 'data';
 
-    public static function NewPage($count)
+    public static function NewPageList($count)
     {
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
+<<<<<<< HEAD
         return Data::where(['host_id'=>$host->id])->take($count)->orderby('id','desc')->get();
+=======
+        return  Data::where(['data.host_id'=>$host->id])
+            ->join('nav', 'data.nav_id', '=', 'nav.id')
+            ->take($count)
+            ->orderby('data.id','desc')
+            ->get();
+>>>>>>> 43b82f4da311242fef7917238a459334873aa176
     }
 
     public static function RandPageList($count)
@@ -24,7 +32,7 @@ class Data extends Authenticatable
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
-        return Data::where(['data.host_id'=>$host->host_id])
+        return Data::where(['data.host_id'=>$host->id])
             ->join('nav', 'data.nav_id', '=', 'nav.id')
             ->take($count)
             ->select('data.id','data.title','nav.en_name')
@@ -74,7 +82,7 @@ class Data extends Authenticatable
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
-        $nav = str_after(\Request::getRequestUri(),'/');
+        $nav = request()->route('nav');
         $nav = Nav::where(['host_id'=>$host->id,'en_name'=>$nav])->first();
         $data =  Data::where(['data.host_id'=>$host->id,'data.nav_id'=>$nav->id])
             ->join('nav', 'data.nav_id', '=', 'nav.id')
@@ -90,6 +98,8 @@ class Data extends Authenticatable
         $data =  Data::find($id);
         return $data;
     }
+
+
 
 
 }
