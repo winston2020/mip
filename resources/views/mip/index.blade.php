@@ -65,103 +65,26 @@
                 <p>微信搜索：nvsheng528</p>
                 <p>长按或扫描二维码关注</p>
             </div>
-
         </div>
     </mip-sidebar>
     <mip-carousel autoplay="" class="focus mip-element mip-layout-responsive mip-layout-size-defined" defer="3000" layout="responsive" width="640" height="360">
         <mip-i-space style="display: block; padding-top: 56.25%;"></mip-i-space>
         <div class="mip-carousel-container">
             <div class="mip-carousel-wrapper" style="width: 800%; transform: translate3d(-686px, 0px, 0px); transition-duration: 300ms;">
+
+                @foreach(随机文章列表(8) as $item)
                 <div class="mip-carousel-slideBox" style="width: 12.5%;">
-                    <a target="_blank" href="{{url('')}}jianfei/jianfeishipu/186735/" class="mip-fill-content mip-replaced-content">
-                        <mip-img src="http://img.piaoliang.com/uploads/allimg2018/190103/116-1z103100jq52.jpg" class="mip-element mip-layout-container mip-fill-content mip-replaced-content mip-img-loaded">
+                    <a target="_blank" href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html" class="mip-fill-content mip-replaced-content">
+                        <mip-img src="{{$imgurl = url(随机图片())}}" class="mip-element mip-layout-container mip-fill-content mip-replaced-content mip-img-loaded">
                             <div class="swipe-tit">
-                                <h3>冬季哪些食物减肥最佳？7种水果让你不惧怕脂肪</h3>
-                                <p>对于很多人来说水果是不可缺少的减肥果蔬，那么大家通常都是一大堆的乱吃，都有减肥最有效果的水果都有哪些吗？今天小编我就为大...</p>
+                                <h3>{{$item->title}}</h3>
+                                <p>{{str_limit($item->content,60,'...')}}</p>
                             </div>
                             <div class="mip-placeholder mip-placeholder-jpg"></div>
-                            <img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/116-1z103100jq52.jpg"></mip-img>
+                            <img class="mip-fill-content mip-replaced-content" src="{{$imgurl}}"></mip-img>
                     </a>
                 </div>
-
-                <div class="mip-carousel-slideBox" style="width: 12.5%;">
-                    <a target="_blank" href="{{url('')}}meirong/hulimeibai/187107/" class="mip-fill-content mip-replaced-content">
-                        <mip-img src="http://img.piaoliang.com/uploads/allimg2018/190110/116-1z110100p0396.jpg" class="mip-element mip-layout-container mip-fill-content mip-replaced-content mip-img-loaded">
-                            <div class="swipe-tit">
-                                <h3>冬季如何甩掉肤质暗沉？这几招学起来就美白啦</h3>
-                                <p>很多女孩子都喜欢拥有白皙的皮肤，俗话说呢一白是可以遮三丑的，那么对于那些肤质天生就暗黄的 MM来说呢如何变白才是最重要的...</p>
-                            </div>
-                            <img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/116-1z110100p0396.jpg"></mip-img>
-                    </a>
-                </div>
-
-                <div class="mip-carousel-slideBox" style="width: 12.5%;">
-                    <a target="_blank" href="{{url('')}}xingzuo/xingzuoqinggan/182789/" class="mip-fill-content mip-replaced-content">
-                        <mip-img src="http://img.piaoliang.com/uploads/allimg2018/190109/116-1z10z955342g.jpg" class="mip-element mip-layout-container mip-fill-content mip-replaced-content mip-img-loaded">
-                            <div class="swipe-tit"><h3>12星座暗恋的表现 一招一式都是套路</h3><p>爱上别人的时候往往都是缺乏勇气去表白，有勇气的人会去主动告白，但是有一些就是只能以自己的方式来暗恋你。那么在12星座中的...</p></div>
-                            <img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/116-1z10z955342g.jpg">
-                        </mip-img>
-                    </a>
-                </div>
-
-                <div class="mip-carousel-slideBox" style="width: 12.5%;">
-                    <a target="_blank" href="{{url('')}}jianfei/jianfeishipu/186960/" class="mip-fill-content mip-replaced-content">
-                        <mip-img src="http://img.piaoliang.com/uploads/allimg2018/190108/116-1z10q006331b.jpg" class="mip-element mip-layout-container mip-fill-content mip-replaced-content mip-img-loaded">
-                            <div class="swipe-tit">
-                                <h3>冬季瘦身吃什么 10款消脂食物任你选</h3>
-                                <p>很多人都觉得想要减肥只要靠着健身就可以啦，但是小编我想说的是不单单只是健身的方面哦，饮食的方面也是可以减肥的，那么能快速...</p>
-                            </div>
-                            <img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/116-1z10q006331b.jpg"></mip-img>
-                    </a>
-                </div>
-
-                <div class="mip-carousel-slideBox" style="width: 12.5%;">
-                    <a target="_blank" href="{{url('')}}hunjia/zhuangrongtoushi/186901/" class="mip-fill-content mip-replaced-content">
-                        <mip-img src="http://img.piaoliang.com/uploads/allimg2018/190107/116-1z10g10145304.jpg" class="mip-element mip-layout-container mip-fill-content mip-replaced-content mip-img-loaded">
-                            <div class="swipe-tit">
-                                <h3>新娘妆容如何画才好看 8招教你画出迷人的气质</h3>
-                                <p>结婚是每个女孩子最向往的事情，那么结婚的时候不只是服饰要靓丽还有妆容也是非常的讲究哦，那么问题就来了很多女孩子都问小编我...</p>
-                            </div>
-                            <img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/116-1z10g10145304.jpg"></mip-img>
-                    </a>
-                </div>
-
-                <div class="mip-carousel-slideBox" style="width: 12.5%;">
-                    <a target="_blank" href="{{url('')}}fengxiong/fengxiongfangfa/186814/" class="mip-fill-content mip-replaced-content">
-                        <mip-img src="http://img.piaoliang.com/uploads/allimg2018/190104/116-1z104101505126.jpg" class="mip-element mip-layout-container mip-fill-content mip-replaced-content mip-img-loaded">
-                            <div class="swipe-tit">
-                                <h3>小平胸不好看？7招丰胸法子让你拥有美胸</h3>
-                                <p>丰胸对于我们女性来说是非常的重要的啦，那么为了达到一个好的效果通常女性都会使用各种法子，那么今天小编我就为大家介绍这几招...</p>
-                            </div><img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/116-1z104101505126.jpg">
-                        </mip-img>
-                    </a>
-                </div>
-
-                <div class="mip-carousel-slideBox" style="width: 12.5%;">
-                    <a target="_blank" href="{{url('')}}jianfei/jianfeishipu/186735/" class="mip-fill-content mip-replaced-content">
-                        <mip-img src="http://img.piaoliang.com/uploads/allimg2018/190103/116-1z103100jq52.jpg" class="mip-element mip-layout-container mip-fill-content mip-replaced-content mip-img-loaded">
-                            <div class="swipe-tit">
-                                <h3>冬季哪些食物减肥最佳？7种水果让你不惧怕脂肪</h3>
-                                <p>对于很多人来说水果是不可缺少的减肥果蔬，那么大家通常都是一大堆的乱吃，都有减肥最有效果的水果都有哪些吗？今天小编我就为大...</p>
-                            </div>
-                            <img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/116-1z103100jq52.jpg"></mip-img>
-                    </a>
-                </div>
-
-                <div class="mip-carousel-slideBox" style="width: 12.5%;">
-                    <a target="_blank" href="{{url('')}}meirong/hulimeibai/187107/" class="mip-fill-content mip-replaced-content">
-                        <mip-img src="http://img.piaoliang.com/uploads/allimg2018/190110/116-1z110100p0396.jpg" class="mip-element mip-layout-container mip-fill-content mip-replaced-content">
-                            <div class="swipe-tit">
-                                <h3>冬季如何甩掉肤质暗沉？这几招学起来就美白啦</h3>
-                                <p>很多女孩子都喜欢拥有白皙的皮肤，俗话说呢一白是可以遮三丑的，那么对于那些肤质天生就暗黄的 MM来说呢如何变白才是最重要的...</p>
-                            </div>
-                            <div class="mip-placeholder mip-placeholder-jpg"></div>
-                            <img class="mip-img-loading mip-fill-content mip-replaced-content" src="./{{$host->templet}}/116-1z110100p0396.jpg">
-                            <div class="mip-placeholder mip-placeholder-jpg"></div>
-                        </mip-img>
-                    </a>
-                </div>
-
+                @endforeach
             </div>
         </div>
     </mip-carousel>
@@ -171,13 +94,12 @@
         <!-- <div class="load-more">
                 <p>查看更多<i></i></p>
             </div> -->
-        {{随机}}
 
         <ul class="caipu_lists">
-            @foreach(\App\Data::RandPageList(6) as $item)
+            @foreach(随机文章列表(6) as $item)
             <li>
-                <a href="{{url('')}}/{{$item->id}}.html"><i>
-                        <mip-img class="lazyload mip-element mip-layout-container mip-img-loaded" data-original="" src="http://img.piaoliang.com/uploads/allimg/170811/76-1fq1093004l1.jpg" alt="{{$item->title}}"><img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/76-1fq1093004l1.jpg" alt="{{$item->title}}"></mip-img>
+                <a href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html"><i>
+                        <mip-img class="lazyload mip-element mip-layout-container mip-img-loaded" data-original="" src="{{随机图片()}}" alt="{{$item->title}}"><img class="mip-fill-content mip-replaced-content" src="{{随机图片()}}" alt="{{$item->title}}"></mip-img>
                     </i>
                     <h5>{{$item->title}}</h5>
                 </a>
@@ -186,10 +108,13 @@
         </ul>
         <div class="block10"></div>
         <ul class="catepic_left" id="ajax-list">
-            @foreach(\App\Data::NewPage(18) as $item)
+            @foreach(最新文章列表(18) as $item)
             <li>
-                <a href="{{url('')}}/{{$item->id}}.html" class="content">
-                    <i><mip-img class="lazyload mip-element mip-layout-container mip-img-loaded" data-original="" src="http://img.piaoliang.com/uploads/allimg/170220/1k4415106-0-lp.jpg" alt="{{$item->title}}"><img class="mip-fill-content mip-replaced-content" src="./{{$host->templet}}/1k4415106-0-lp.jpg" alt="{{$item->title}}"></mip-img></i>
+                <a href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html" class="content">
+                    <i>
+                        <mip-img class="lazyload mip-element mip-layout-container mip-img-loaded" data-original="" src="{{随机图片()}}" alt="{{$item->title}}">
+                        </mip-img>
+                    </i>
                     <h5>{{$item->title}}</h5>
                 </a>
                 <span>{{$item->created_at}}</span>
