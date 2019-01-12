@@ -60,8 +60,10 @@ function 关键词($string, $len=1){
     }
     $keyword = implode($new,',');
     return $keyword;
+}
 
-
+function 描述($string){
+   return str_limit($string,150,'...');
 }
 
 
