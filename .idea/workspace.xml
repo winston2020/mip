@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5691015-8db9-4913-b07e-23730d3dafa1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/sitemap.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DanZhan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DanZhan.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/NiceWork.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/NiceWork.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="a5691015-8db9-4913-b07e-23730d3dafa1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -326,6 +317,12 @@
               <item name="mip" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mip" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -387,12 +384,12 @@
       <workItem from="1547108108400" duration="11304000" />
       <workItem from="1547179386782" duration="6703000" />
       <workItem from="1547260074196" duration="27833000" />
-      <workItem from="1547518238133" duration="1971000" />
+      <workItem from="1547518238133" duration="2588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67676000" />
+    <option name="totallyTimeSpent" value="68293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
