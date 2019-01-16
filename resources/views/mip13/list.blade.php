@@ -54,7 +54,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="shortcut icon" href="https://www.mipcms.cn/favicon.ico" type="image/x-icon">
-    <title>功能介绍_{{$host->title}}</title>
+    <title>{{$host->title}}</title>
     <meta name="keywords" content="{{$host->keyword}}">
     <meta name="description" content="{{$host->desc}}">
 
@@ -83,7 +83,7 @@
                     </li>
                     @foreach(\App\Data::栏目() as $item)
                         <li class="mipmb-dropdown-item ">
-                            <a href="{{$item->en_name}}/" data-type="mip" data-title="{{$item->name}}"
+                            <a href="{{url('')}}/{{$item->en_name}}" data-type="mip" data-title="{{$item->name}}"
                                title="{{$item->name}}">{{$item->name}}</a>
                         </li>
                     @endforeach
@@ -106,13 +106,13 @@
     <div class="container">
         <ul class="list-unstyled d-flex breadcrumb p-0 bg-transparent">
             <li class="breadcrumb-item"><a href="{{url('')}}" title="{{$host->title}}">{{$host->title}}</a></li>
-            <li class="breadcrumb-item"><a href="{{url('')}}/{{$item->en_name}}/" title="功能介绍">功能介绍</a></li>
+            <li class="breadcrumb-item"><a href="{{url('')}}/{{当前栏目()->en_name}}/" title="{{当前栏目()->name}}">{{当前栏目()->name}}</a></li>
         </ul>
         <div class="row">
             <main class="col-lg-8">
                 <section class="mip-box mip-box-default">
                     <section class="mip-box-heading">
-                        <h3>功能介绍</h3>
+                        <h3>{{当前栏目()->name}}</h3>
                     </section>
                     <section class="mip-box-body">
                         <div class="mipui-widget-media-body mipui-category-list-001">
@@ -164,9 +164,9 @@
                     </section>
                     <section class="mip-box-body">
                         <ul class="list-unstyled">
-                            @foreach(\App\Data::NewPage(6) as $item)
+                            @foreach(\App\Data::NewPageList(6) as $item)
                             <li class="li-box-list">
-                                <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                                <a href="/{{$item->en_name}}/{{$item->id}}.html" data-type="mip"
                                    data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}S</a>
                                 <p>{{\App\Data::随机日期()}}</p>
                             </li>

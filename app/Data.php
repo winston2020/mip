@@ -16,15 +16,12 @@ class Data extends Authenticatable
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
-<<<<<<< HEAD
-        return Data::where(['host_id'=>$host->id])->take($count)->orderby('id','desc')->get();
-=======
+
         return  Data::where(['data.host_id'=>$host->id])
             ->join('nav', 'data.nav_id', '=', 'nav.id')
             ->take($count)
             ->orderby('data.id','desc')
             ->get();
->>>>>>> 43b82f4da311242fef7917238a459334873aa176
     }
 
     public static function RandPageList($count)
@@ -58,14 +55,14 @@ class Data extends Authenticatable
 
     public static function 人名()
     {
-        $data = file(public_path('author.txt'));
-        return $data;
+        $data = file(public_path('data/author.txt'));
+        return  array_random($data);
     }
 
     public static function 地名()
     {
-        $data = file(public_path('city.txt'));
-        return $data;
+        $data = file(public_path('data/city.txt'));
+        return array_random($data);
     }
 
     public static function 栏目()
@@ -98,6 +95,19 @@ class Data extends Authenticatable
         $data =  Data::find($id);
         return $data;
     }
+
+    public static function CurrentNav()
+    {
+        $nav = request()->route('nav');
+        $host = $_SERVER['HTTP_HOST'];
+        $domain =  str_after($host,'.');
+        $host =  Host::where(['name'=>$domain])->first();
+        $data = \App\Nav::where(['host_id'=>$host->id,'en_name'=>$nav])->first();
+        return  $data;
+    }
+    
+    
+
 
 
 

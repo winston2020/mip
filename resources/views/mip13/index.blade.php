@@ -198,7 +198,7 @@
 
                             <section class="mip-box-body">
                                 <ul class="list-unstyled clearfix">
-                                    @foreach(\App\Data::NewPage(5) as $item)
+                                    @foreach(\App\Data::NewPageList(5) as $item)
                                     <li class="list-time">
                                         <a href="{{$item->id}}"
                                            data-type="mip" data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
@@ -222,7 +222,7 @@
                     </section>
                     <section class="mip-box-body">
                         <ul class="list-unstyled">
-                            @foreach(\App\Data::NewPage(6) as $item)
+                            @foreach(\App\Data::NewPageList(6) as $item)
                             <li class="li-box-list">
                                 <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
                                    data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>

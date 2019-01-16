@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/resources/views/mip/show.blade.php" line="56" mnemonic="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a5691015-8db9-4913-b07e-23730d3dafa1" name="Default" comment="">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,15 +233,20 @@
       <change afterPath="$PROJECT_DIR$/public/img/logo_500.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/mip/show.blade.php" afterDir="false" />
 >>>>>>> 43b82f4da311242fef7917238a459334873aa176
+=======
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/NiceWork.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/NiceWork.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Core/Lable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Core/Lable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Data.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Data.php" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mip/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mip/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/mip/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mip/list.blade.php" afterDir="false" />
 >>>>>>> 5177b8545a552499f9ba908cd42bbfd3b71287ab
+=======
+      <change beforePath="$PROJECT_DIR$/resources/views/mip/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mip/show.blade.php" afterDir="false" />
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -278,9 +287,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/mip/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -297,16 +307,18 @@
             <state relative-caret-position="-1615">
               <caret line="8" column="85" lean-forward="true" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
 >>>>>>> 43b82f4da311242fef7917238a459334873aa176
+=======
+            <state relative-caret-position="114">
+              <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
               <folding>
                 <element signature="e#4351#7416#2#HTML" expanded="true" />
                 <element signature="e#8260#16201#2#HTML" expanded="true" />
                 <element signature="e#16478#18633#2#HTML" expanded="true" />
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#mip-sidebar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#26898#26902#0#HTML" expanded="true" />
-                <element signature="e#27179#27185#0#HTML" expanded="true" />
+                <element signature="e#26739#26743#0#HTML" expanded="true" />
+                <element signature="e#27028#27034#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#mip-showmore#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#mip-fixed#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -377,6 +389,7 @@
       </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <file leaf-file-name="city.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/data/city.txt">
@@ -400,6 +413,13 @@
 =======
             <state relative-caret-position="171">
               <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+=======
+      <file leaf-file-name="Lable.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Core/Lable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
             </state>
           </provider>
         </entry>
@@ -407,8 +427,8 @@
       <file leaf-file-name="Data.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="82" column="81" lean-forward="true" selection-start-line="82" selection-start-column="81" selection-end-line="82" selection-end-column="81" />
+            <state relative-caret-position="499">
+              <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
               <folding>
                 <element signature="e#23#51#0#PHP" expanded="true" />
               </folding>
@@ -460,8 +480,8 @@
       <file leaf-file-name="list.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/mip/list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="93" column="45" lean-forward="true" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
+            <state relative-caret-position="732">
+              <caret line="79" column="53" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -520,15 +540,24 @@
       <find>http://mip.piaoliang.com/</find>
       <find>title</find>
       <find>catepic_left</find>
-      <find>mip-fill-content mip-replaced-content</find>
       <find>type</find>
       <find>foot-nav</find>
       <find>RandPageList</find>
       <find>随机</find>
       <find>栏目文章</find>
+      <find>/冬季瘦身吃什么？银耳8款瘦身食谱任你选 - 减肥食谱频道 - 漂亮女人1_files</find>
+      <find>.下载</find>
+      <find>最新文章</find>
+      <find>主页</find>
+      <find>点击</find>
+      <find>菜单</find>
+      <find>mip-fill-content mip-replaced-content</find>
+      <find>http://www.piaoliang.com/</find>
+      <find>artile</find>
     </findStrings>
     <replaceStrings>
       <replace>{{$host-&gt;templet}}</replace>
+      <replace />
       <replace>{{url('')}}</replace>
     </replaceStrings>
   </component>
@@ -548,6 +577,7 @@
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/NiceWork.php" />
         <option value="$PROJECT_DIR$/resources/views/mip/index.blade.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/Data.php" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -563,9 +593,17 @@
 =======
         <option value="$PROJECT_DIR$/app/Core/Lable.php" />
         <option value="$PROJECT_DIR$/resources/views/mip/list.blade.php" />
+=======
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/mip/list.blade.php" />
+        <option value="$PROJECT_DIR$/app/Data.php" />
         <option value="$PROJECT_DIR$/resources/views/mip/show.blade.php" />
+<<<<<<< HEAD
 >>>>>>> 43b82f4da311242fef7917238a459334873aa176
+=======
+        <option value="$PROJECT_DIR$/app/Core/Lable.php" />
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
       </list>
     </option>
   </component>
@@ -698,7 +736,13 @@
             <path>
               <item name="mip" type="b2602c69:ProjectViewProjectNode" />
               <item name="mip" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mip" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="mip" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mip" type="b2602c69:ProjectViewProjectNode" />
@@ -798,12 +842,17 @@
 >>>>>>> 5177b8545a552499f9ba908cd42bbfd3b71287ab
 =======
       <workItem from="1547179386782" duration="6703000" />
+<<<<<<< HEAD
       <workItem from="1547260074196" duration="11993000" />
 >>>>>>> 43b82f4da311242fef7917238a459334873aa176
+=======
+      <workItem from="1547260074196" duration="16674000" />
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -821,6 +870,9 @@
 =======
     <option name="totallyTimeSpent" value="49865000" />
 >>>>>>> 43b82f4da311242fef7917238a459334873aa176
+=======
+    <option name="totallyTimeSpent" value="54546000" />
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -845,6 +897,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21382979" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16614583" />
 >>>>>>> 5177b8545a552499f9ba908cd42bbfd3b71287ab
@@ -852,6 +905,10 @@
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21382979" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16614583" />
 >>>>>>> 43b82f4da311242fef7917238a459334873aa176
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21382979" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16614583" />
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1319,26 +1376,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/mip/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="113" column="23" lean-forward="true" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
+        <state relative-caret-position="556">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
           <folding>
-            <element signature="n#style#0;n#mip-i-space#0;n#mip-carousel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>
 >>>>>>> 5177b8545a552499f9ba908cd42bbfd3b71287ab
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Core/Lable.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/mip/list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="732">
+          <caret line="79" column="53" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Data.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1361,12 +1419,17 @@
         <state relative-caret-position="271">
           <caret line="82" column="81" lean-forward="true" selection-start-line="82" selection-start-column="81" selection-end-line="82" selection-end-column="81" />
 >>>>>>> 43b82f4da311242fef7917238a459334873aa176
+=======
+        <state relative-caret-position="499">
+          <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
           <folding>
             <element signature="e#23#51#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1384,15 +1447,19 @@
     <entry file="file://$PROJECT_DIR$/app/Core/Lable.php">
 =======
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/mip/index.blade.php">
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        <state relative-caret-position="266">
+          <caret line="113" column="23" lean-forward="true" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
           <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#mip-i-space#0;n#mip-carousel#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/mip/list.blade.php">
 >>>>>>> 43b82f4da311242fef7917238a459334873aa176
       <provider selected="true" editor-type-id="text-editor">
@@ -1401,23 +1468,30 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 891df549859c07b59ff26aaf182d7a5f63aea8ae
     <entry file="file://$PROJECT_DIR$/resources/views/mip/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1615">
-          <caret line="8" column="85" lean-forward="true" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+        <state relative-caret-position="114">
+          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
           <folding>
             <element signature="e#4351#7416#2#HTML" expanded="true" />
             <element signature="e#8260#16201#2#HTML" expanded="true" />
             <element signature="e#16478#18633#2#HTML" expanded="true" />
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#mip-sidebar#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#26898#26902#0#HTML" expanded="true" />
-            <element signature="e#27179#27185#0#HTML" expanded="true" />
+            <element signature="e#26739#26743#0#HTML" expanded="true" />
+            <element signature="e#27028#27034#0#HTML" expanded="true" />
             <element signature="n#style#0;n#mip-showmore#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#mip-fixed#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
 >>>>>>> 5177b8545a552499f9ba908cd42bbfd3b71287ab
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Core/Lable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
         </state>
       </provider>
     </entry>

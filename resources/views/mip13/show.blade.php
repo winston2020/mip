@@ -54,8 +54,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="shortcut icon" href="https://www.mipcms.cn/favicon.ico" type="image/x-icon">
-    <title>文章标题_{{$host->title}}</title>
-    <meta name="keywords" content="{{$host->keyword}}">
+    <title>{{$article->title}}</title>
+    <meta name="keywords" content="{{关键词($article->title,3)}}">
     <meta name="description" content="{{$host->desc}}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{$host->title}}">
@@ -70,7 +70,7 @@
     <style mip-custom="">
     
     </style>
-    <link rel="canonical" href="{{url('')}}">
+    <link rel="canonical" href="{{当前URL()}}">
 </head>
 <body class="mip-i-android-scroll" style="opacity: 1; animation: none;">
 <mip-cambrian site-id="1544095438960114" class="mip-element mip-layout-container"></mip-cambrian>
@@ -109,7 +109,7 @@
     <div class="container">
         <ul class="list-unstyled d-flex breadcrumb p-0 bg-transparent">
             <li class="breadcrumb-item"><a href="{{url('')}}" title="{{$host->title}}">{{$host->title}}</a></li>
-            <li class="breadcrumb-item"><a href="{{url('')}}/{{$item->en_name}}/" title="功能介绍">功能介绍</a></li>
+            <li class="breadcrumb-item"><a href="{{url('')}}/{{当前栏目()->en_name}}/" title="{{当前栏目()->name}}">{{当前栏目()->name}}</a></li>
         </ul>
     </div>
     <div class="container">
@@ -117,25 +117,25 @@
             <main class="col-lg-8">
                 <section class="mip-box mip-box-main">
                     <section class="mip-box-heading">
-                        <h1 class="detail-title">文章标题</h1>
+                        <h1 class="detail-title">{{$article->title}}</h1>
                         <div class="info clearfix">
                             <ul>
                                 <li>时间:
-                                    <time>{{\App\Data::随机日期()}}</time>
+                                    <time>{{$article->created_at}}</time>
                                 </li>
                                 <li>浏览:3389</li>
-                                <li>来源:{{$host->title}}</li>
+                                <li>来源:{{人名()}}</li>
                             </ul>
                         </div>
                     </section>
                     <section class="mip-box-body mipcms-detail-body">
-                        <p>{{\App\Data::文章内容()}}</p>
+                        <p>{!! $article->content !!}</p>
                         <p>猜你喜欢</p>
                         <div class="mipui-widget-media-body mipui-category-list-001">
-                            @foreach(\App\Data::NewPage(5) as $item)
+                            @foreach(\App\Data::NewPageList(5) as $item)
                             <div class="mipui-category-list-item">
                                 <div class="item-media">
-                                    <a href="{{url('')}}/{{$item->id}}.html"
+                                    <a href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html"
                                        class="item-link" data-type="mip" data-title="{{$item->title}}"
                                        title="{{$item->title}}">
                                         <mip-img layout="container"
@@ -148,7 +148,7 @@
                                     </a>
                                 </div>
                                 <div class="item-content">
-                                    <h4><a href="https://www.mipcms.cn/article/66f6a256d27c0416f47a851f.html"
+                                    <h4><a href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html"
                                            data-type="mip" data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
                                     </h4>
                                     <p class="description">
@@ -164,11 +164,11 @@
                             <ul class="clearfix list-unstyled">
                                 <div class="mipmb-page-item item-up-page">
                                     <p>上一篇</p>
-                                    <a href="https://www.mipcms.cn/article/a66a7f265c1a35f60e0d1c47.html">百度官方号怎么申请</a>
+                                    <a href="/{{$item->en_name}}/{{$item->id}}.html">{{$item->title}}</a>
                                 </div>
                                 <div class="mipmb-page-item item-down-page ">
                                     <p>下一篇</p>
-                                    <a href="https://www.mipcms.cn/article/d0b84fbbd3053bf5d062a1e2.html">一大波mip模板来袭，速度拿下</a>
+                                    <a href="/{{$item->en_name}}/{{$item->id}}.html">{{$item->title}}</a>
                                 </div>
                             </ul>
                         </div>
@@ -185,9 +185,9 @@
                     </section>
                     <section class="mip-box-body">
                         <ul class="list-unstyled">
-                            @foreach(\App\Data::NewPage(5) as $item)
+                            @foreach(\App\Data::NewPageList(5) as $item)
                             <li class="li-box-list">
-                                <a href="{{url('')}}/{{$item->id}}.html" data-type="mip"
+                                <a href="/{{$item->en_name}}/{{$item->id}}.html" data-type="mip"
                                    data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
                                 <p>{{\App\Data::随机日期()}}</p>
                             </li>
