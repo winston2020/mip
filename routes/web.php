@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('sitemap{page}.xml','SiteMapController@index');
 Route::get('/','HomeController@index');
 Route::get('{nav}/','HomeController@list');
 Route::get('{nav}/{id}.html','HomeController@show');
+

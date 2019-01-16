@@ -46,7 +46,7 @@ class NiceWork extends Command
         set_time_limit(0);
         ini_set('memory_limit', '128M');
 
-        for ($i=14324;$i<20030;$i++){
+        for ($i=0;$i<20030;$i++){
             $this->url[] = 'https://so.gushiwen.org/guwen/bookv_'.$i.'.aspx';
         }
         $this->totalPageCount = 20030;
@@ -78,8 +78,8 @@ class NiceWork extends Command
                         $data['created_at'] = date('Y-m-d H:i:s');
                         $data['updated_at'] = date('Y-m-d H:i:s');
                         $data['host_id'] = 1;
-                        $data['nav_id'] = rand(1,5);
-                        $data['content'] = mb_convert_encoding ($content, 'UTF-8');
+                        $data['nav_id'] =  array_random([1,2,3,4,5]);
+                        $data['content'] = mb_convert_encoding($content, 'UTF-8');
                     }
                     catch(\Exception $e)
                     {
