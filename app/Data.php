@@ -16,6 +16,7 @@ class Data extends Authenticatable
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
+
         return  Data::where(['data.host_id'=>$host->id])
             ->join('nav', 'data.nav_id', '=', 'nav.id')
             ->take($count)

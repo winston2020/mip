@@ -81,6 +81,11 @@
     <div class="block25"></div>
     <div class="main">
         <div class="block12"></div>
+
+    <!--footer Star -->
+    <footer>
+        <p>CopyRight 2012-2019 {{$host->title}}</p>
+
         <ul class="caipu_lists">
             @foreach(随机文章列表(6) as $item)
             <li>
