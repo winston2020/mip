@@ -116,14 +116,14 @@
                     </section>
                     <section class="mip-box-body">
                         <div class="mipui-widget-media-body mipui-category-list-001">
-                            @foreach(\App\Data::栏目文章(10) as $item)
+                            @foreach($page =最新文章列表(10) as $item)
                             <div class="mipui-category-list-item">
                                 <div class="item-media">
                                     <a href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html"
                                        class="item-link" data-type="mip" data-title="{{$item->title}}"
                                        title="{{$item->title}}">
                                         <mip-img layout="container" alt="{{$item->title}}"
-                                                 src="/uploads/article/2018/09/10/5b967e2fd8396.png"
+                                                 src="/{{$host->templet}}/style/images/5b967e2fd8396.png"
                                                  class="mip-element mip-layout-container mip-img-loaded"><img
                                                     class="mip-fill-content mip-replaced-content" alt="{{$item->title}}"
                                                     src="/{{$host->templet}}/style/images/5b967e2fd8396.png"></mip-img>
@@ -136,22 +136,12 @@
                                     <p class="description">
                                         有很多小伙伴们不知道如何在MIPCMS里面插入外站视频，那么今天就教大家几招，来解决外部视频插入的烦恼。新建自定义字段自定义字段是跟着文章，不是全局的，如果新建全局字段，可以用</p>
                                     <p>
-                                        <span>{{\App\Data::随机日期()}}</span>
+                                        <span>{{$item->created_at}}</span>
                                     </p>
                                 </div>
                             </div>
                             @endforeach
-                        </div>
-                        <div class="page-control">
-                            <ul class="pagination">
-                                <li class="page-item active"><span class="page-link">1</span></li>
-                                <li class="page-item"><a class="page-link" data-type="mip"
-                                                         href="https://www.mipcms.cn/article/function/index_2.html">2</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" data-type="mip"
-                                                         href="https://www.mipcms.cn/article/function/index_2.html">&gt;</a>
-                                </li>
-                            </ul>
+                                {!! str_replace('Next','下一页',str_replace('Previous','上一页',$page->links())) !!}
                         </div>
                     </section>
 
