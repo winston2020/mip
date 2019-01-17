@@ -66,11 +66,5 @@ function 描述($string){
    return str_limit($string,150,'...');
 }
 
-function 分页(){
-    return \App\Data::getpage();
-}
-
-
-
 
 

@@ -105,20 +105,5 @@ class Data extends Authenticatable
         $data = \App\Nav::where(['host_id'=>$host->id,'en_name'=>$nav])->first();
         return  $data;
     }
-
-    public static function  getpage()
-    {
-        $host = $_SERVER['HTTP_HOST'];
-        $domain =  str_after($host,'.');
-        $host =  Host::where(['name'=>$domain])->first();
-        $nav = request()->route('nav');
-        $nav = \App\Nav::where(['host_id'=>$host->id,'en_name'=>$nav])->first();
-        if ($nav==''){
-            $data = DB::table('data')->where(['host_id'=>$host->id])->simplePaginate(15);
-        }else{
-            $data = DB::table('data')->where(['host_id'=>$host->id,'nav_id'=>$nav->id])->simplePaginate(15);
-        }
-        return $data;
-    }
-
+    
 }
