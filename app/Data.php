@@ -21,6 +21,7 @@ class Data extends Authenticatable
         return  Data::where(['data.host_id'=>$host->id])
             ->join('nav', 'data.nav_id', '=', 'nav.id')
             ->take($count)
+            ->select('data.id','data.title','nav.name','nav.en_name','data.content')
             ->orderby('data.id','desc')
             ->simplePaginate(15);
     }

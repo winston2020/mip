@@ -134,7 +134,7 @@
                                            data-type="mip" data-title="{{$item->title}}" title="{{$item->title}}">{{$item->title}}</a>
                                     </h4>
                                     <p class="description">
-                                        有很多小伙伴们不知道如何在MIPCMS里面插入外站视频，那么今天就教大家几招，来解决外部视频插入的烦恼。新建自定义字段自定义字段是跟着文章，不是全局的，如果新建全局字段，可以用</p>
+                                        {!! $item->content !!}</p>
                                     <p>
                                         <span>{{$item->created_at}}</span>
                                     </p>
