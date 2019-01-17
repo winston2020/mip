@@ -105,5 +105,7 @@ class Data extends Authenticatable
         $data = \App\Nav::where(['host_id'=>$host->id,'en_name'=>$nav])->first();
         return  $data;
     }
-    
+
+
+
 }
