@@ -100,7 +100,7 @@
         </ul>
         <div class="block10"></div>
         <ul class="catepic_left" id="ajax-list">
-            @foreach(最新文章列表(18) as $item)
+            @foreach($page =最新文章列表(18) as $item)
             <li>
                 <a href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html" class="content">
                     <i>
@@ -112,7 +112,9 @@
                 <span>{{$item->created_at}}</span>
             </li>
             @endforeach
+            {!! str_replace('Next','下一页',str_replace('Previous','上一页',$page->links())) !!}
         </ul>
+
         <div class="block10"></div>
         <div class="foot-nav">
             <div class="inner clr">
