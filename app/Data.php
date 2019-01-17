@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
 
 class Data extends Authenticatable
 {
@@ -21,7 +22,7 @@ class Data extends Authenticatable
             ->join('nav', 'data.nav_id', '=', 'nav.id')
             ->take($count)
             ->orderby('data.id','desc')
-            ->get();
+            ->simplePaginate(15);
     }
 
     public static function RandPageList($count)
@@ -84,9 +85,8 @@ class Data extends Authenticatable
         $data =  Data::where(['data.host_id'=>$host->id,'data.nav_id'=>$nav->id])
             ->join('nav', 'data.nav_id', '=', 'nav.id')
             ->orderby('id','desc')
-            ->take($count)
             ->select('data.id','data.title','nav.en_name','nav.name','data.content','data.created_at','data.updated_at')
-            ->get();
+            ->simplePaginate($count);
         return $data;
     }
 
@@ -106,10 +106,4 @@ class Data extends Authenticatable
         return  $data;
     }
     
-    
-
-
-
-
-
 }

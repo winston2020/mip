@@ -76,7 +76,7 @@
         </ul>
         <div class="block10"></div>
         <ul class="catepic_left" id="ajax-list">
-            @foreach(栏目文章列表(18) as $item)
+            @foreach($page = 栏目文章列表(18) as $item)
             <li>
                 <a href="{{url('')}}/{{$item->en_name}}/{{$item->id}}.html" class="content">
                     <i>
@@ -88,15 +88,15 @@
                 <span>{{$item->created_at}}</span>
             </li>
             @endforeach
+                {!! str_replace('Next','下一页',str_replace('Previous','上一页',$page->links())) !!}
         </ul>
         <div class="block10"></div>
         <div class="foot-nav">
             <div class="inner clr">
                 <span><a target="_blank" href="{{url('')}}"><i class="on">首页</i></a></span>
                 @foreach(\App\Data::栏目() as $item)
-                <span><a target="_blank" href="{{url('')}}/{{$item->en_name}}"><i>{{$item->name}}</i></a></span>
+                <span><a target="_blank" href="{{url('')}}/{{$item->en_name}}/"><i>{{$item->name}}</i></a></span>
                 @endforeach
-
             </div>
         </div>
         <div class="block10"></div>
