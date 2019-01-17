@@ -201,7 +201,6 @@
         <p class="text-center mip-footer">©2019 <a data-type="mip" href="{{url('')}}" data-title="{{$host->title}}">{{$host->title}}</a>
             <a href="{{url('')}}"> 苏ICP备16039536号-2</a> Powered By {{$host->title}}
             <mip-stats-baidu token="aa0ba8827eb0b92deb3dc9369698d6d3" class="mip-element mip-layout-container">
-                <script src="/{{$host->templet}}/style/js/hm.js"></script>
             </mip-stats-baidu>
         </p>
     </div>
@@ -211,12 +210,12 @@
     <mip-gototop class="mip-element mip-layout-container"></mip-gototop>
 </mip-fixed>
 
-<script src="/{{$host->templet}}/style/js/mip.js"></script>
-<script src="/{{$host->templet}}/style/js/mip-stats-baidu.js"></script>
-<script src="/{{$host->templet}}/style/js/mip-gototop.js" type="text/javascript" charset="utf-8"></script>
-<script src="/{{$host->templet}}/style/js/mip-history.js" type="text/javascript" charset="utf-8"></script>
-<script src="/{{$host->templet}}/style/js/mip-fixed.js" type="text/javascript" charset="utf-8"></script>
-<script src="/{{$host->templet}}/style/js/mip-cambrian.js"></script>
+<script src="https://mipcache.bdstatic.com/static/v1/mip.js"></script>
+<script src="https://mipcache.bdstatic.com/static/v1/mip-sidebar/mip-sidebar.js"></script>
+<script src="https://mipcache.bdstatic.com/static/v1/mip-gototop/mip-gototop.js"></script>
+<script src="https://mipcache.bdstatic.com/static/v1/mip-stats-baidu/mip-stats-baidu.js"></script>
+<script src="https://mipcache.bdstatic.com/static/v1/mip-stats-cnzz/mip-stats-cnzz.js"></script>
+<script src="https://mipcache.bdstatic.com/static/v1/mip-stats-baidu/mip-stats-baidu.js"></script>
 
 
 </body>
