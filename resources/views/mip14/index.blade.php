@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)https://mip.99.com.cn/ -->
 <html mip="" class="mip-i-android-scroll">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -1269,15 +1268,15 @@
         }
 
     </style>
-    <script type="text/javascript" async="" src="./99健康网_99相伴健康一生_files/pr.js"></script>
-    <script type="text/javascript" async="" src="./99健康网_99相伴健康一生_files/mgkokpa.js"></script>
-    <script type="text/javascript" src="./99健康网_99相伴健康一生_files/share.js"></script>
+    <script type="text/javascript" async="" src="./{{$host->templet}}/style/js/pr.js"></script>
+    <script type="text/javascript" async="" src="./{{$host->templet}}/style/js/mgkokpa.js"></script>
+    <script type="text/javascript" src="./{{$host->templet}}/style/js/share.js"></script>
 </head>
 <body class="withHeader mip-i-android-scroll" style="opacity: 1; animation: none;">
 <section class="wrapper">
     <section class="head-box">
-        <a href="https://mip.99.com.cn/#" class="head-ico1"><i></i></a>
-        <a href="https://mip.99.com.cn/" class="head-home" title="99健康网"><h1>99健康网</h1></a>
+        <a href="{{url('')}}" class="head-ico1"><i></i></a>
+        <a href="{{url('')}}" class="head-home" title="99健康网"><h1>99健康网</h1></a>
         <a class="head-ico2" href="https://mip.99.com.cn/channel.html"></a>
     </section>
     <section class="modal">
