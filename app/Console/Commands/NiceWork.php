@@ -77,8 +77,8 @@ class NiceWork extends Command
                         $content = $crawler->filter('body > div.main3 > div.left > div > div.cont > div')->html();
                         $data['created_at'] = date('Y-m-d H:i:s');
                         $data['updated_at'] = date('Y-m-d H:i:s');
-                        $data['host_id'] = 13;
-                        $data['nav_id'] =  array_random([15,16,17,18]);
+                        $data['host_id'] = 1;
+                        $data['nav_id'] =  array_random([1,2,3,4,5]);
                         $data['content'] = mb_convert_encoding($content, 'UTF-8');
                     }
                     catch(\Exception $e)
