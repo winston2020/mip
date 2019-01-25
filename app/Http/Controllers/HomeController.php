@@ -23,7 +23,8 @@ class HomeController extends Controller
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
-        return view($host->templet.'.list',compact('host'));
+        $common = Common::find(1);
+        return view($host->templet.'.list',compact('host','common'));
     }
 
     public function show()
@@ -33,7 +34,8 @@ class HomeController extends Controller
         $host =  Host::where(['name'=>$domain])->first();
         $id =    $nav = request()->route('id');
         $article = Data::find($id);
-        return view($host->templet.'.show',compact('host','article'));
+        $common = Common::find(1);
+        return view($host->templet.'.show',compact('host','article','common'));
     }
 
 }
