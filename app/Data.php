@@ -107,6 +107,17 @@ class Data extends Authenticatable
         return  $data;
     }
 
+    public static function NewNav()
+    {
+        $host = $_SERVER['HTTP_HOST'];
+        $domain =  str_after($host,'.');
+        $host =  Host::where(['name'=>$domain])->first();
+        $res =  HostNav::where(['hostnav.host_id'=>$host->id])
+            ->join('nav','nav.id','=','host.id')
+            ->get();
+        return $res;
+    }
+
 
 
 }
