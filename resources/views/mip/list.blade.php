@@ -122,7 +122,8 @@
 <script src="https://mipcache.bdstatic.com/static/v1/mip-gototop/mip-gototop.js"></script>
 <script src="https://mipcache.bdstatic.com/static/v1/mip-stats-baidu/mip-stats-baidu.js"></script>
 <script src="https://mipcache.bdstatic.com/static/v1/mip-stats-cnzz/mip-stats-cnzz.js"></script>
-<mip-stats-baidu token="ab6c63c17c0af0dfd5e3e72144a538ae"></mip-stats-baidu>
+<mip-stats-baidu token="{{$host->baidu_token}}"></mip-stats-baidu>
 <script src="https://mipcache.bdstatic.com/static/v1/mip-stats-baidu/mip-stats-baidu.js"></script>
+{!!$common->baidu_js!!}
 </body>
 </html>

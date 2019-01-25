@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Common;
 use App\Data;
 use App\Host;
 use Illuminate\Http\Request;
@@ -13,7 +14,8 @@ class HomeController extends Controller
         $host = $_SERVER['HTTP_HOST'];
         $domain =  str_after($host,'.');
         $host =  Host::where(['name'=>$domain])->first();
-        return view($host->templet.'.index',compact('host'));
+        $common = Common::find(1);
+        return view($host->templet.'.index',compact('host','common'));
     }
 
     public function list($nav, Request $request)
@@ -33,4 +35,5 @@ class HomeController extends Controller
         $article = Data::find($id);
         return view($host->templet.'.show',compact('host','article'));
     }
+
 }
